@@ -1,0 +1,10 @@
+@import "variables";
+
+// add mixins
+@import "mixin/_general";
+
+// local styles
+@import "plugins_custom/_general";
+@import "base/_general";
+@import "components/_general";
+@import "pages/_general";
