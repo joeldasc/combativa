@@ -32,11 +32,9 @@ body {
 	overflow-x: hidden;
 	font-family: $sfuidisplayMedium;
 	position: relative;
-	&.mb-scroll {
-		@include maxw($mq-md) {
-			overflow: hidden;
-		}
-	}
+    background-image: url($imgs + 'background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 h1, h2, h3, h4, h5 {
@@ -152,47 +150,20 @@ video {
 	border: 0;
 }
 
-.clenvi__container {
-	width: 100%;
-	max-width: size(1240);
-	margin: 0 auto;
-	padding: 0 size(20);
+.cbtiva__whatsapp {
+    display: table;
+    position: fixed;
+    bottom: 2%;
+    right: 2%;
+    width: size(70);
+    z-index: 1;
+    @include maxw($mq-sm) {
+        width: size(60);
+    }
 }
 
-.grid {
-	display: grid;
-	grid-auto-flow: row dense;
-	&-gap-20 {
-		grid-gap: size(20);
-		@include maxw($mq-sm) {
-			grid-gap: size(30);
-		}
-	}
-	&-gap-30 {
-		grid-gap: size(30);
-	}
-	&-col-2 {
-		grid-template-columns: repeat(2,1fr);
-		@include maxw($mq-sm) {
-			grid-template-columns: repeat(1,1fr);
-		}
-	}
-	&-col-3 {
-		grid-template-columns: repeat(3,1fr);
-		@include maxw($mq-sm) {
-			grid-template-columns: repeat(1,1fr);
-		}
-	}
-	&-col-4 {
-		grid-template-columns: repeat(4,1fr);
-		@include maxw($mq-sm) {
-			grid-template-columns: repeat(1,1fr);
-		}
-	}
-	&-col-6 {
-		grid-template-columns: repeat(6,1fr);
-		@include maxw($mq-sm) {
-			grid-template-columns: repeat(1,1fr);
-		}
-	}
+.pristine-error {
+    color: red;
+    font-size: size(13);
+    margin: size(5) 0 0;
 }

@@ -1,0 +1,30 @@
+.cbtiva__btn {
+    text-align: center;
+    color: $white;
+    padding: size(13) size(10);
+    text-transform: uppercase;
+    font-family: $sfuidisplayBold;
+    font-size: size(23);
+    width: 100%;
+    text-decoration: none;
+    transition: all .3s;
+    @include maxw($mq-sm) {
+        font-size: size(18);
+    }
+    &__primary {
+        background-color: $primaryColor;
+        &:hover {
+            @include minw($mq-sm) {
+                background-color: $green;
+            }
+        }
+    }
+    &__green {
+        background-color: $green;
+        &:hover {
+            @include minw($mq-sm) {
+                background-color: $primaryColor;
+            }
+        }
+    }
+}

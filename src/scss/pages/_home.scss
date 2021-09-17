@@ -1,0 +1,255 @@
+.cbtiva__home {
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    @include maxw($mq-md) {
+        display: block;
+    }
+    &__col {
+        padding: 0 size(50);
+        @include maxw($mq-md) {
+            padding: 0 size(20);
+        }
+        &:nth-child(1) {
+            width: 65%;
+            background-image: url($imgs + 'background-col.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: 50%;
+            @include maxw($mq-md) {
+                background-image: url($imgs + 'background-mobile.jpg');
+                width: 100%;
+            }
+        }
+        &:nth-child(2) {
+            width: 35%;
+            background-color: $secondaryColor;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            @include maxw($mq-md) {
+                width: 100%;
+                display: block;
+                min-height: auto;
+                padding: size(50) size(20) size(100);
+            }
+        }
+    }
+    .header {
+        display: flex;
+        justify-content: space-between;
+        padding: size(50) 0 0;
+        &__logo {
+            img {
+                max-width: size(240);
+                @include maxw($mq-md) {
+                    max-width: size(160);
+                }
+            }
+            &:nth-child(2) {
+                img {
+                    @include maxw($mq-md) {
+                        max-width: size(104);
+                    }
+                }
+            }
+        }
+    }
+    .info {
+        width: 100%;
+        max-width: size(560);
+        margin: size(40) 0 0;
+        @include maxw($mq-md) {
+            margin: 0;
+            padding: size(20) 0;
+        }
+        h1, h2, h3, h4, p {
+            color: $white;
+        }
+        h2, h4, p {
+            font-family: $sfuidisplayLight;
+            font-weight: 300;
+        }
+        h2 {
+            font-size: size(32);
+            line-height: size(43);
+            margin: 0 0 size(15);
+            @include maxw($mq-md) {
+                font-size: size(18);
+                line-height: size(26);
+            }
+        }
+        h1 {
+            font-size: size(35);
+            line-height: size(45);
+            text-transform: uppercase;
+            position: relative;
+            margin: 0 0 size(35);
+            @include maxw($mq-md) {
+                margin: 0 0 size(20);
+            }
+            &:after {
+                content: "";
+                position: absolute;
+                bottom: size(-10);
+                left: size(-10);
+                display: block;
+                width: 100%;
+                height: size(42);
+                background-image: url($imgs + 'line.svg');
+                background-repeat: no-repeat;
+                background-size: contain;
+                @include maxw($mq-md) {
+                    bottom: size(-20);
+                }
+            }
+            @include maxw($mq-md) {
+                font-size: size(22);
+                line-height: size(28);
+            }
+        }
+        h4 {
+            font-size: size(23);
+            @include maxw($mq-md) {
+                font-size: size(16);
+                line-height: size(16);
+            }
+        }
+        &__event {
+            &__col {
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+                margin-bottom: size(30);
+                .icon {
+                    margin-right: size(15);
+                    img {
+                        @include maxw($mq-md) {
+                            max-width: size(78);
+                        }
+                    }
+                }
+                .detail {
+                    h3 {
+                        font-size: size(27);
+                        margin: 0 0 size(3);
+                        @include maxw($mq-md) {
+                            font-size: size(16);
+                            line-height: size(16);
+                        }
+                    }
+                    p {
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+    .cbtiva__form {
+        width: 100%;
+        max-width: size(430);
+        margin: 0 auto;
+        .text {
+            margin: 0 0 size(25);
+            h2, p {
+                color: $white;
+                text-align: center;
+            }
+            h2 {
+                font-size: size(36);
+                margin: 0 0 size(10);
+                @include maxw($mq-md) {
+                    font-size: size(28);
+                    line-height: size(34);
+                    margin: 0 0 size(3);
+                }
+            }
+            p {
+                font-family: $sfuidisplayBold;
+                font-size: size(26);
+                line-height: size(30);
+                margin: 0;
+                @include maxw($mq-md) {
+                    font-size: size(24);
+                    line-height: size(28);
+                }
+            }
+        }
+        .form-group {
+            width: 100%;
+            margin: 0 0 size(15);
+            input,
+            select {
+                width: 100%;
+                display: block;
+                padding: size(15);
+                border: size(1) solid $white;
+                background: transparent;
+                color: $white;
+                font-weight: 300;
+                font-family: $sfuidisplayLight;
+                &::placeholder {
+                    color: $white;
+                }
+            }
+            select {
+                appearance: none;
+                background-image: url($imgs + 'angle-down.svg');
+                background-repeat: no-repeat;
+                background-size: size(10);
+                background-position: calc(100% - 10px);
+                option {
+                    background: $secondaryColor;
+                }
+            }
+            .custom-checkbox {
+                display: block;
+                position: relative;
+                padding-left: 35px;
+                cursor: pointer;
+                font-size: size(15);
+                line-height: size(24);
+                color: $white;
+                font-family: $sfuidisplayLight;
+                font-weight: 300;
+                user-select: none;
+                input {
+                    position: absolute;
+                    opacity: 0;
+                    cursor: pointer;
+                    height: 0;
+                    width: 0;
+                }
+                .checkmark {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: size(20);
+                    width: size(20);
+                    border: size(1) solid $white;
+                }
+                input:checked ~ .checkmark {
+                    background-color: $primaryColor;
+                    border: size(1) solid $primaryColor;
+                }
+                .checkmark:after {
+                    content: "";
+                    position: absolute;
+                    left: size(7);
+                    top: size(3);
+                    width: size(5);
+                    height: size(10);
+                    border: solid $white;
+                    border-width: 0 size(3) size(3) 0;
+                    transform: rotate(45deg);
+                    display: none;
+                }
+                input:checked ~ .checkmark:after {
+                    display: block;
+                }
+            }
+        }
+    }
+}

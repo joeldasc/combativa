@@ -9,13 +9,129 @@
     <title>Combativa</title>
 </head>
 <body>
-    <header class="cbtiva__header">
-    </header>
     <main>
         <section class="cbtiva__home">
+            <div class="cbtiva__home__col">
+                <header class="header">
+                    <div class="header__logo">
+                        <img src="./images/logo-tema.svg" alt="Logo tema">
+                    </div>
+                    <div class="header__logo">
+                        <img src="./images/logo-rstec.svg" alt="Logo rstec">
+                    </div>
+                </header>
+                <div class="info">
+                    <h2>Regístrate y conéctate a la charla gratuita</h2>
+                    <h1>Case Packer – Encajado:<br>La eficiencia,<br>flexibilidad y ventajas<br>de la automatización del proceso</h1>
+                    <div class="info__event">
+                        <h2>Evento online</h2>
+                        <div class="info__event__col">
+                            <div class="icon">
+                                <img src="./images/icon-calendar.svg" alt="Calendario">
+                            </div>
+                            <div class="detail">
+                                <h3>Miércoles 04</h3>
+                                <p>Ago. 2021</p>
+                            </div>
+                        </div>
+                        <div class="info__event__col">
+                            <div class="icon">
+                                <img src="./images/icon-hour.svg" alt="Hora">
+                            </div>
+                            <div class="detail">
+                                <h3>18:30 hrs</h3>
+                                <p>(Hora Lima)</p>
+                            </div>
+                        </div>
+                        <h4>Vía:</h4>
+                        <div class="info__event__col">
+                            <div class="icon">
+                                <img src="./images/zoom.jpg" alt="Zoom">
+                            </div>
+                            <div class="icon">
+                                <img src="./images/ct.png" alt="CT pack">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cbtiva__home__col">
+                <div class="cbtiva__form">
+                    <div class="text">
+                        <h2>Regístrate</h2>
+                        <p>y sé parte de nuestro evento online</p>
+                    </div>
+                    <form id="form1" novalidate method="post">
+                        <div class="form-group">
+                            <input
+                                class="form-control"
+                                required
+                                data-pristine-required-message="Requerido"
+                                type="text"
+                                placeholder="Nombres y Apellidos"
+                            >
+                        </div>
+                        <div class="form-group">
+                            <input
+                                class="form-control"
+                                required
+                                data-pristine-required-message="Requerido"
+                                type="number"
+                                placeholder="Teléfono"
+                            >
+                        </div>
+                        <div class="form-group">
+                            <input
+                                class="form-control"
+                                required
+                                data-pristine-required-message="Requerido"
+                                data-pristine-email-message="Formato incorrecto"
+                                type="email"
+                                placeholder="Correo Electrónico"
+                            >
+                        </div>
+                        <div class="form-group">
+                            <input
+                                class="form-control"
+                                required
+                                data-pristine-required-message="Requerido"
+                                type="text"
+                                placeholder="Empresa"
+                            >
+                        </div>
+                        <div class="form-group">
+                            <select
+                                required
+                                data-pristine-required-message="Requerido"
+                                class="form-control"
+                            >
+                                <option value="" disabled selected>Seleccione fecha</option>
+                                <option value="10:00 AM - 13:00 PM">10:00 AM - 13:00 PM</option>
+                                <option value="13:00 PM - 16:00 PM">13:00 PM - 16:00 PM</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="custom-checkbox">ACEPTO LOS TÉRMINOS Y CONDICIONES.(*)<br>En cumplimiento de la Ley 29733 y su reglamento, la información proporcionada será incorporada a la base de datos de RSTEC.
+                                <input
+                                    type="checkbox"
+                                    name="terminos-condiciones"
+                                    required
+                                    data-pristine-required-message="Requerido"
+                                    class="form-control"
+                                >
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                        <div class="cbtiva__form__button">
+                            <button type="submit" class="cbtiva__btn cbtiva__btn__primary">Enviar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </section>
+        <a href="#" class="cbtiva__whatsapp">
+            <img src="./images/whatsapp.svg" alt="whatsapp">
+        </a>
     </main>
-    <footer class="cbtiva__footer">
-    </footer>
 </body>
 </html>

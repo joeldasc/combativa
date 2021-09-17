@@ -1,0 +1,59 @@
+.cbtiva__wrapper {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: size(120) 0;
+    @include maxw($mq-md) {
+        padding: size(50) 0 size(80)
+    }
+    &__container {
+        width: 100%;
+        max-width: size(650);
+        margin: 0 auto;
+        padding: 0 size(20);
+    }
+    .logo {
+        margin-bottom: size(50);
+        @include maxw($mq-md) {
+            margin-bottom: size(30);
+        }
+        img {
+            @include maxw($mq-md) {
+                max-width: size(160);
+            }
+        }
+    }
+    .logo img,
+    img {
+        margin: 0 auto;
+    }
+    p {
+        color: $white;
+        font-family: $sfuidisplayLight;
+        text-align: center;
+        font-size: size(28);
+        line-height: size(34);
+        @include maxw($mq-md) {
+            font-size: size(18);
+            line-height: size(24);
+        }
+    }
+    .cbtiva__btn {
+        max-width: size(320);
+        margin: 0 auto;
+        display: table;
+    }
+    .logo-footer {
+        position: absolute;
+        bottom: size(20);
+        left: 0;
+        right: 0;
+        img {
+            @include maxw($mq-md) {
+                max-width: size(104);
+            }
+        }
+    }
+}
