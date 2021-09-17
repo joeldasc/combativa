@@ -29,12 +29,20 @@
     img {
         margin: 0 auto;
     }
+    .animated-img,
+    .logo img,
+    .logo-footer {
+        opacity: 0;
+        transform: translate(0px, 50px);
+    }
     p {
         color: $white;
         font-family: $sfuidisplayLight;
         text-align: center;
         font-size: size(28);
         line-height: size(34);
+        opacity: 0;
+        transform: translate(0px, 50px);
         @include maxw($mq-md) {
             font-size: size(18);
             line-height: size(24);
@@ -44,6 +52,8 @@
         max-width: size(320);
         margin: 0 auto;
         display: table;
+        opacity: 0;
+        transform: translate(0px, 50px);
     }
     .logo-footer {
         position: absolute;

@@ -17,6 +17,7 @@
         "npm": ">=2.1.5"
     },
     "dependencies": {
+        "gsap": "^3.7.1",
         "pristinejs": "^0.1.9"
     },
     "devDependencies": {

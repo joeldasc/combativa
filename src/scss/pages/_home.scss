@@ -48,7 +48,13 @@
                     max-width: size(160);
                 }
             }
+            &:nth-child(1) {
+                opacity: 0;
+                transform: translate(-50px, 0px);
+            }
             &:nth-child(2) {
+                opacity: 0;
+                transform: translate(50px, 0px);
                 img {
                     @include maxw($mq-md) {
                         max-width: size(104);
@@ -72,6 +78,10 @@
             font-family: $sfuidisplayLight;
             font-weight: 300;
         }
+        & > h2 {
+            opacity: 0;
+            transform: translate(0px, 50px);
+        }
         h2 {
             font-size: size(32);
             line-height: size(43);
@@ -87,6 +97,8 @@
             text-transform: uppercase;
             position: relative;
             margin: 0 0 size(35);
+            opacity: 0;
+            transform: translate(0px, 50px);
             @include maxw($mq-md) {
                 margin: 0 0 size(20);
             }
@@ -112,17 +124,26 @@
         }
         h4 {
             font-size: size(23);
+            opacity: 0;
+            transform: translate(0px, 50px);
             @include maxw($mq-md) {
                 font-size: size(16);
                 line-height: size(16);
             }
         }
         &__event {
+            h2,
+            h4 {
+                opacity: 0;
+                transform: translate(0px, 50px);
+            }
             &__col {
                 display: flex;
                 align-items: center;
                 flex-wrap: wrap;
                 margin-bottom: size(30);
+                opacity: 0;
+                transform: translate(50px, 0px);
                 .icon {
                     margin-right: size(15);
                     img {
@@ -156,6 +177,8 @@
             h2, p {
                 color: $white;
                 text-align: center;
+                opacity: 0;
+                transform: translate(0px, 50px);
             }
             h2 {
                 font-size: size(36);
@@ -176,6 +199,10 @@
                     line-height: size(28);
                 }
             }
+        }
+        form {
+            opacity: 0;
+            transform: translate(0px, 50px);
         }
         .form-group {
             width: 100%;
